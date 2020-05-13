@@ -37,9 +37,14 @@ This will happen in 2 phases, each of which is materialised by a pull request:
     └── model.yaml      
 ```
 ## How to run the app <a id="how-to"></a>
-Clone the repo and cd to src directory, run as below
+Clone the repo and run as below
+
 
 ```
+python3 -m venv flask-test-env
+source flask-test-env/bin/activate
+cd src
+python3 -m pip install install -r requirements.txt
 python3 api.py
  * Serving Flask app "api" (lazy loading)
  * Environment: production
@@ -55,9 +60,10 @@ python3 api.py
 ```
 
 ## Testing the app <a id="how-to-test"></a>
-Clone the repo and cd to src/api/test directory, run as below
+Clone the repo and run as below
 
 ```
+cd src/api/test
 pytest -s -W ignore::DeprecationWarning
 =============================================== test session starts ================================================
 platform darwin -- Python 3.7.4, pytest-5.4.2, py-1.8.1, pluggy-0.13.1
